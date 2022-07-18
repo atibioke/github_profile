@@ -13,9 +13,8 @@ const Card = () => {
         (item) =>
           new Date(item.created_at).toLocaleString("en-US", {
             day: "2-digit",
-          }) < 30
+          }) <= 30
       );
-      console.log(jsonData);
       setProfile(currentSubmit);
     } catch (error) {
       console.error(error.message);
